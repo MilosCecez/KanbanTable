@@ -1,0 +1,279 @@
+
+
+.card{
+    display: grid;
+    padding: 8px;
+    width: 85%;
+    margin:-70px auto 0;
+    border: 1px solid $black;
+    cursor: pointer;
+
+
+    .card-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .card-title{
+            margin: 0;
+            font-size: 13px;
+        }
+        #close-btn{
+            background-color: $light-red;
+            border: 1px solid $red;
+            width: 6px;
+            height: 6px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            opacity: .7;
+        }
+    }
+    .card-text{
+        text-align: center;
+        margin-left: 15px;
+        font-size: 12px;
+        max-width: 150px;
+    }
+
+    .card-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .index{
+            font-weight: bolder;
+            font-size: 14px;
+        }
+
+        #edit-btn{
+            background-color: $pastel-green;
+            border: 1px solid $green;
+            padding: 8px;
+            font-size: 15px;
+            width: 6px;
+            height: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: .7;
+        }
+}
+
+}
+
+
+.overlay{
+    height: 140vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(73, 166, 233, 0.5);
+    display: none;
+    place-items: center;
+    z-index: 1;
+
+    form{
+        position: absolute;
+        top: 15%;
+        border: 2px solid $black;
+        background-color: $white;
+        padding: 25px 35px;
+
+        .alert {
+            &.active{
+                margin-bottom: 16px;
+                height: 20px;
+                display: grid;
+                align-items: center;
+                text-align: center;
+                font-size: 12px;
+                border-radius: 4px;
+                color: $dark-red;
+                background-color: $light-red;
+                text-transform: capitalize;
+            }
+          }
+
+          .edit{
+            width: 100%;
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color:$light-gray;
+            border: 1px dotted $gray ;
+            text-align: center;
+            font-size: 17px;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+          }
+
+        .input-group{
+
+            &.subhidden{
+                display: none;
+            }
+            p{
+                margin-bottom: 5px;
+            }
+            input{
+                width: 95.5%;
+                border: 2px solid $black;
+                font-size: 16px;
+                padding: 5px;
+            }
+        }
+        select{
+            width: 100%;
+            border: 2px solid $black;
+            font-size: 16px;
+            padding: 5px;
+            background: $light-gray;
+        }
+
+        textarea{
+            border: 2px solid $black;
+            font-size: 16px;
+            padding: 5px;
+        }
+    }
+
+    .button-group{
+        margin-top: 30px;
+
+        .discard-btn{
+            background-color: $light-skin;
+            border-color: $dark-skin;
+        }
+        .save-btn{
+            background-color: $pastel-green;
+            border-color: $green;
+        }
+
+    }
+}
+
+
+section{
+    padding: 30px 100px;
+
+    .create-btn{
+        padding: 15px 80px;
+        background-color: $pastel-green;
+        outline: none;
+        border: 1px solid $green;
+        font-weight: bolder;
+        font-size: 18px;
+        width: auto;
+    }
+
+    table{
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+        border: 1px solid $black;
+        border-collapse: collapse;
+        font-size: 14px;
+
+
+        .preheader{
+            th{
+                padding: 5px;
+            }
+        }
+
+        .header{
+            th{
+                padding: 16px 0;
+
+                &.inprogress{
+                    padding: 8px 0;
+                }
+            }
+        }
+
+        .group{
+            padding: 8px 0;
+
+            &.critical{
+                background-color: $light-red;
+                border-left: 1.5px solid $red;
+                border-right: 1.5px solid $red;
+            }
+
+            &.issues{
+                background-color: $skin;
+                border-left: 1.5px solid $red;
+                border-right: 1.5px solid $red;
+            }
+
+            &.maintenance{
+                background-color: $light-skin;
+                border-left: 1.5px solid $red;
+                border-right: 1.5px solid $red;
+            }
+        }
+
+        .fields{
+            height: 200px;
+
+            td{
+                height: 200px;
+            }
+        }
+
+        }
+
+    }
+
+
+
+#close-overlay{
+    display: none;
+
+    &.active{
+        display: grid;
+    }
+
+.close-modal{
+    background-color: $white;
+    border: 2px solid $black;
+    position: absolute;
+    top: 40%;
+    padding: 20px;
+    width: 330px;
+    height: 100px;
+
+
+    p{
+        width: 100%;
+        margin-top: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: $light-gray;
+        border: 1px dotted $gray;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .button-group{
+        margin-top: 20px;
+
+            .no-btn{
+                background: rgba(100, 149, 237, 0.4);
+                border-color: $blue;
+            }
+
+            .yes-btn{
+                background-color: $light-red;
+                border-color: $red;
+            }
+    }
+
+}
+}

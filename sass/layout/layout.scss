@@ -1,0 +1,52 @@
+//colors
+
+$pastel-green: #c1e1c1;
+$green: #228b22;
+$black: #000;
+$light-red: #FBD8C9;
+$red: #F08080;
+$white: #fff;
+$light-gray: #F5F5F5;
+$gray: #808080;
+$dark-red: #721c24;
+$light-skin: #FEE2B3;
+$dark-skin: #FFCD94;
+$skin: #FDE2C2;
+$light-skin: #FFE39F;
+$blue: #0000FF;
+
+
+
+//others
+
+
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table,tr, th,td{
+    border: .5px solid $black;
+}
+
+td{
+    width: 16.6%;
+    text-align: center;
+    padding: 8px 0;
+    z-index: 0;
+}
+
+.button-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=button]{
+    width: 45%;
+    font-weight: bolder;
+    outline: none;
+    border: 1px solid;
+    padding: 7px 0;
+    cursor: pointer;
+}
